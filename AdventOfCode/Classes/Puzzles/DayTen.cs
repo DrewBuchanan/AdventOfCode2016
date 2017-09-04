@@ -12,13 +12,16 @@ namespace AdventOfCode.Puzzles
 		Dictionary<int, Output> outputs;
 		List<string> instructions;
 
+		/// <summary>
+		/// Initializes bots and outputs, then runs through instructions until we find the bot that compares highValue and lowValue
+		/// </summary>
+		/// <returns>the id of the bot that compares highValue and lowValue</returns>
 		public int PartOne ()
 		{
 			Initialize ();
-			ProcessInstructions ();
 
-			int droidWereLookingFor = -9999;
-			while (droidWereLookingFor == -9999)
+			int droidWereLookingFor = Target.EMPTY_VALUE;
+			while (droidWereLookingFor == Target.EMPTY_VALUE)
 			{
 				foreach (Bot bot in bots.Values)
 				{
@@ -36,10 +39,13 @@ namespace AdventOfCode.Puzzles
 			return droidWereLookingFor;
 		}
 
+		/// <summary>
+		/// Initializes bots and outputs, then runs through instructions until outputs 0, 1, and 2 have values, then returns those values
+		/// </summary>
+		/// <returns>values of outputs 0, 1, and 2</returns>
 		public List<int> PartTwo ()
 		{
 			Initialize ();
-			ProcessInstructions ();
 			while (outputs [0].value == Target.EMPTY_VALUE ||
 				outputs [1].value == Target.EMPTY_VALUE ||
 				outputs [2].value == Target.EMPTY_VALUE)
@@ -58,96 +64,103 @@ namespace AdventOfCode.Puzzles
 			return rtrn;
 		}
 
+		/// <summary>
+		/// Initializes data and populates Targets based on instruction
+		/// </summary>
 		void Initialize ()
 		{
+			// Initialize Data
 			bots = new Dictionary<int, Bot> ();
 			outputs = new Dictionary<int, Output> ();
 			instructions = new List<string> (System.IO.File.ReadAllLines ("Day10Input.txt"));
+
+			// Iterate over instructions
 			for (int i = 0; i < instructions.Count; i++)
 			{
 				string [] split = instructions [i].Split (' ');
+				// Give bot value instruction
 				if (split [0] == "value")
 				{
 					int id = int.Parse (split [split.Length - 1]);
-					if (!bots.ContainsKey (id))
-					{
-						Bot newBot = new Bot (id);
-						bots.Add (id, newBot);
-					}
+					CreateBotIfNeeded (id);
+					bots [id].Receive (int.Parse (split [1]));
 				}
+				#region Comparison instruction
 				else if (split [0] == "bot")
 				{
+					#region Get Comparer
 					int id = int.Parse (split [1]);
-					if (!bots.ContainsKey (id))
-					{
-						Bot newBot = new Bot (id);
-						bots.Add (id, newBot);
-					}
+					CreateBotIfNeeded (id);
+					Bot comparer = bots [id];
+					#endregion
 
-					int receiverOneId = int.Parse (split [6]);
-					if (split [5] == "output" && !outputs.ContainsKey (receiverOneId))
+					#region Get Low Receiver
+					Target lowReceiver;
+					int lowReceiverId = int.Parse (split [6]);
+					if (split [5] == "output")
 					{
-						Output newOutput = new Output ();
-						outputs.Add (receiverOneId, newOutput);
+						CreateOutputIfNeeded (lowReceiverId);
+						lowReceiver = outputs [lowReceiverId];
 					}
-					else if (split [5] == "bot" && !bots.ContainsKey (receiverOneId))
+					else
 					{
-						Bot newBot = new Bot (receiverOneId);
-						bots.Add (receiverOneId, newBot);
+						CreateBotIfNeeded (lowReceiverId);
+						lowReceiver = bots [lowReceiverId];
 					}
+					#endregion
 
-					int receiverTwoId = int.Parse (split [11]);
-					if (split [5] == "output" && !outputs.ContainsKey (receiverTwoId))
+					#region Get High Receiver
+					Target highReceiver;
+					int highReceiverId = int.Parse (split [11]);
+					if (split [10] == "output")
 					{
-						Output newOutput = new Output ();
-						outputs.Add (receiverTwoId, newOutput);
+						CreateOutputIfNeeded (highReceiverId);
+						highReceiver = outputs [highReceiverId];
 					}
-					else if (split [5] == "bot" && !bots.ContainsKey (receiverTwoId))
+					else
 					{
-						Bot newBot = new Bot (receiverTwoId);
-						bots.Add (receiverTwoId, newBot);
+						CreateBotIfNeeded (highReceiverId);
+						highReceiver = bots [highReceiverId];
 					}
+					#endregion
+
+					comparer.lowReceiver = lowReceiver;
+					comparer.highReceiver = highReceiver;
 				}
+				#endregion
 			}
 		}
 
-		void ProcessInstructions ()
+		/// <summary>
+		/// Checks if there is an output with ID id, then creates one if there isn't.
+		/// </summary>
+		/// <param name="id">the id to check for and create if needed</param>
+		void CreateOutputIfNeeded (int id)
 		{
-			for (int i = 0; i < instructions.Count; i++)
+			if (!outputs.ContainsKey (id))
 			{
-				string [] split = instructions [i].Split (' ');
-				if (split [0] == "value")
-				{
-					int receiver = int.Parse (split [split.Length - 1]);
-					bots [receiver].Receive (int.Parse (split [1]));
-				}
-				else if (split [0] == "bot")
-				{
-					int giverId = int.Parse (split [1]);
-					Bot giver = bots [giverId];
+				Output newOutput = new Output (id);
+				outputs.Add (id, newOutput);
+			}
+		}
 
-					Target lowReceiver;
-					int lowReceiverId = int.Parse (split [6]);
-					if (split [5] == "bot")
-						lowReceiver = bots [lowReceiverId];
-					else
-						lowReceiver = outputs [lowReceiverId];
-
-
-					Target highReceiver;
-					int highReceiverId = int.Parse (split [11]);
-					if (split [10] == "bot")
-						highReceiver = bots [highReceiverId];
-					else
-						highReceiver = outputs [highReceiverId];
-
-					giver.lowReceiver = lowReceiver;
-					giver.highReceiver = highReceiver;
-				}
+		/// <summary>
+		/// Checks if there is a bot with ID id, then creates one if there isn't.
+		/// </summary>
+		/// <param name="id">the id to check for and create if needed</param>
+		void CreateBotIfNeeded (int id)
+		{
+			if (!bots.ContainsKey (id))
+			{
+				Bot newBot = new Bot (id);
+				bots.Add (id, newBot);
 			}
 		}
 	}
 
+	/// <summary>
+	/// Base class for Bot and Output
+	/// </summary>
 	public class Target
 	{
 		public const int EMPTY_VALUE = -9999;
@@ -200,6 +213,10 @@ namespace AdventOfCode.Puzzles
 			low = EMPTY_VALUE;
 		}
 
+		/// <summary>
+		/// Receives an integer value and stores it, then swaps high and low if they are not assigned properly
+		/// </summary>
+		/// <param name="received">received value</param>
 		public override void Receive (int received)
 		{
 			if (low == EMPTY_VALUE)
@@ -226,8 +243,9 @@ namespace AdventOfCode.Puzzles
 	{
 		public int value;
 
-		public Output ()
+		public Output (int id)
 		{
+			this.id = id;
 			value = EMPTY_VALUE;
 		}
 
