@@ -53,6 +53,7 @@
     <Compile Include="Classes\Puzzles\DaySix.cs" />
     <Compile Include="Classes\Puzzles\DayTen.cs" />
     <Compile Include="Classes\Puzzles\DayThree.cs" />
+    <Compile Include="Classes\Puzzles\DayTwelve.cs" />
     <Compile Include="Classes\Puzzles\DayTwo.cs" />
     <Compile Include="Classes\Utilities\AlphaFreqDict.cs" />
     <Compile Include="Classes\Utilities\Direction.cs" />
