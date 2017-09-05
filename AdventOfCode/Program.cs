@@ -86,7 +86,8 @@ namespace AdventOfCode
 			*/
 			#endregion
 			//DayThirteenTest ();
-			DayThirteenPartOne ();
+			//DayThirteenPartOne ();
+			DayThirteenPartTwo ();
 		}
 		#region Day Thirteen
 		static void DayThirteenTest ()
@@ -124,6 +125,14 @@ namespace AdventOfCode
 			}
 			Console.SetCursorPosition (0, 42 + 1);
 			Console.WriteLine (path.Count);
+			Console.ReadLine ();
+		}
+		static void DayThirteenPartTwo ()
+		{
+			Console.WriteLine ("Day 13 Part 2 Output");
+			DayThirteen dayThirteen = new DayThirteen ();
+			Dictionary<System.Drawing.Point, int> coords = dayThirteen.PartTwo ();
+			Console.WriteLine (coords.Count);
 			Console.ReadLine ();
 		}
 		#endregion
