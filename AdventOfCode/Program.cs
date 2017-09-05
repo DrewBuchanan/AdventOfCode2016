@@ -85,7 +85,48 @@ namespace AdventOfCode
 			DayTwelvePartTwo ();
 			*/
 			#endregion
+			//DayThirteenTest ();
+			DayThirteenPartOne ();
 		}
+		#region Day Thirteen
+		static void DayThirteenTest ()
+		{
+			Console.WriteLine ("Day 13 Test Output");
+			DayThirteen dayThirteen = new DayThirteen ();
+			List<Vector2> path = dayThirteen.Test ();
+			for (int i = 0; i < path.Count; i++)
+			{
+				Console.SetCursorPosition (path [i].x, path [i].y + 1);
+				Console.ForegroundColor = ConsoleColor.Green;
+				Console.Write ('0');
+				Console.SetCursorPosition (0, 7 + 1 + i);
+				Console.ResetColor ();
+				Console.WriteLine (path [i].ToString ());
+			}
+			Console.WriteLine (path.Count);
+			Console.ReadLine ();
+		}
+		static void DayThirteenPartOne ()
+		{
+			Console.WriteLine ("Day 13 Part 1 Output");
+			DayThirteen dayThirteen = new DayThirteen ();
+			List<Vector2> path = dayThirteen.PartOne ();
+			Console.ReadLine ();
+			for (int i = 0; i < path.Count; i++)
+			{
+				Console.SetCursorPosition (path [i].x, path [i].y + 1);
+				Console.ForegroundColor = ConsoleColor.Green;
+				Console.Write ('0');
+				//Console.SetCursorPosition (0, 42 + 1 + i);
+				Console.ResetColor ();
+				System.Threading.Thread.Sleep (100);
+				//Console.WriteLine (path [i].ToString ());
+			}
+			Console.SetCursorPosition (0, 42 + 1);
+			Console.WriteLine (path.Count);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region Day Twelve
 		static void DayTwelveTest ()
 		{

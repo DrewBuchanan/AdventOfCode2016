@@ -52,10 +52,12 @@
     <Compile Include="Classes\Puzzles\DaySeven.cs" />
     <Compile Include="Classes\Puzzles\DaySix.cs" />
     <Compile Include="Classes\Puzzles\DayTen.cs" />
+    <Compile Include="Classes\Puzzles\DayThirteen.cs" />
     <Compile Include="Classes\Puzzles\DayThree.cs" />
     <Compile Include="Classes\Puzzles\DayTwelve.cs" />
     <Compile Include="Classes\Puzzles\DayTwo.cs" />
     <Compile Include="Classes\Utilities\AlphaFreqDict.cs" />
+    <Compile Include="Classes\Utilities\AStar.cs" />
     <Compile Include="Classes\Utilities\Direction.cs" />
     <Compile Include="Classes\Utilities\Vector2.cs" />
     <Compile Include="Program.cs" />
