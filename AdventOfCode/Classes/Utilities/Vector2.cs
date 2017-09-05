@@ -23,7 +23,10 @@ namespace AdventOfCode.Utilities
 
 		public override int GetHashCode ()
 		{
-			return x.GetHashCode () ^ y.GetHashCode ();
+			int hash = 17;
+			hash = hash * 23 + x.GetHashCode ();
+			hash = hash * 23 + y.GetHashCode ();
+			return hash;
 		}
 
 		public static bool operator == (Vector2 x, Vector2 y)
