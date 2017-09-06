@@ -10,7 +10,6 @@ namespace AdventOfCode.Puzzles
 	{
 		int favoriteNumber;
 		bool [,] grid;
-		ConsoleColor [,] coloredMap;
 
 		public List<Vector2> Test ()
 		{
