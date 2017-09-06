@@ -85,10 +85,56 @@ namespace AdventOfCode
 			DayTwelvePartTwo ();
 			*/
 			#endregion
-			//DayThirteenTest ();
-			//DayThirteenPartOne ();
+			#region Day Thirteen
+			/*
+			DayThirteenTest ();
+			DayThirteenPartOne ();
 			DayThirteenPartTwo ();
+			*/
+			#endregion
+			#region Day Fourteen
+			/*
+			DayFourteenPartOneTest ();
+			DayFourteenPartOne ();
+			DayFourteenPartTwoTest ();
+			DayFourteenPartTwo ();
+			*/
+			#endregion
 		}
+		#region Day Fourteen
+		static void DayFourteenPartOneTest ()
+		{
+			Console.WriteLine ("Day 14 Part 1 Test Output");
+			DayFourteen dayFourteen = new DayFourteen ();
+			int index = dayFourteen.PartOneTest ();
+			Console.WriteLine ("Index of 64th key: " + index);
+			Console.ReadLine ();
+		}
+		static void DayFourteenPartOne ()
+		{
+			Console.WriteLine ("Day 14 Part 1 Output");
+			DayFourteen dayFourteen = new DayFourteen ();
+			int index = dayFourteen.PartOne ();
+			Console.WriteLine ("Index of 64th key: " + index);
+			Console.ReadLine ();
+		}
+		static void DayFourteenPartTwoTest ()
+		{
+			Console.WriteLine ("Day 14 Part 2 Test Output");
+			DayFourteen dayFourteen = new DayFourteen ();
+			int index = dayFourteen.PartTwoTest ();
+			Console.WriteLine ("Index of 64th key: " + index);
+			Console.ReadLine ();
+		}
+		static void DayFourteenPartTwo ()
+		{
+			Console.WriteLine ("Day 14 Part 2 Output");
+			DayFourteen dayFourteen = new DayFourteen ();
+			int index = dayFourteen.PartTwo ();
+			Console.WriteLine ("Index of 64th key: " + index);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region Day Thirteen
 		static void DayThirteenTest ()
 		{
