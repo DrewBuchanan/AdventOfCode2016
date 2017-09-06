@@ -107,7 +107,38 @@ namespace AdventOfCode
 			DayFifteenPartTwo ();
 			*/
 			#endregion
+			#region Day Sixteen
+			DaySixteenPartOneTest ();
+			DaySixteenPartOne ();
+			DaySixteenPartTwo ();
+			#endregion
 		}
+		#region Day Sixteen
+		static void DaySixteenPartOneTest ()
+		{
+			Console.WriteLine ("Day 16 Part 1 Test Output");
+			DaySixteen daySixteen = new DaySixteen ();
+			string checksum = daySixteen.PartOneTest ();
+			Console.WriteLine ("Checksum: " + checksum);
+			Console.ReadLine ();
+		}
+		static void DaySixteenPartOne ()
+		{
+			Console.WriteLine ("Day 16 Part 1 Output");
+			DaySixteen daySixteen = new DaySixteen ();
+			string checksum = daySixteen.PartOne ();
+			Console.WriteLine ("Checksum: " + checksum);
+			Console.ReadLine ();
+		}
+		static void DaySixteenPartTwo ()
+		{
+			Console.WriteLine ("Day 16 Part 2 Output");
+			DaySixteen daySixteen = new DaySixteen ();
+			string checksum = daySixteen.PartTwo ();
+			Console.WriteLine ("Checksum: " + checksum);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region Day Fifteen
 		static void DayFifteenPartOneTest ()
 		{
