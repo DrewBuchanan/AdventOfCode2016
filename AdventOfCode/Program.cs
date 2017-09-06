@@ -100,7 +100,40 @@ namespace AdventOfCode
 			DayFourteenPartTwo ();
 			*/
 			#endregion
+			#region Day Fifteen
+			/*
+			DayFifteenPartOneTest ();
+			DayFifteenPartOne ();
+			DayFifteenPartTwo ();
+			*/
+			#endregion
 		}
+		#region Day Fifteen
+		static void DayFifteenPartOneTest ()
+		{
+			Console.WriteLine ("Day 15 Part 1 Test Output");
+			DayFifteen dayFifteen = new DayFifteen ();
+			int t = dayFifteen.PartOneTest ();
+			Console.WriteLine ("To get a capsule, press the button at t=" + t);
+			Console.ReadLine ();
+		}
+		static void DayFifteenPartOne ()
+		{
+			Console.WriteLine ("Day 15 Part 1 Output");
+			DayFifteen dayFifteen = new DayFifteen ();
+			int t = dayFifteen.PartOne ();
+			Console.WriteLine ("To get a capsule, press the button at t=" + t);
+			Console.ReadLine ();
+		}
+		static void DayFifteenPartTwo ()
+		{
+			Console.WriteLine ("Day 15 Part 2 Output");
+			DayFifteen dayFifteen = new Puzzles.DayFifteen ();
+			int t = dayFifteen.PartTwo ();
+			Console.WriteLine ("To get a capsule, press the button at t=" + t);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region Day Fourteen
 		static void DayFourteenPartOneTest ()
 		{
