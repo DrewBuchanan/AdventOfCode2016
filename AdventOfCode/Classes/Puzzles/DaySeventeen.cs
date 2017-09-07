@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 
 namespace AdventOfCode.Puzzles
 {
+	// TODO: Clean up this class
 	public class DaySeventeen
 	{
 		string puzzleInput = "yjjvjgan";
