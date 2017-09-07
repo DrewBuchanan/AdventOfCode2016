@@ -108,9 +108,16 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region Day Sixteen
+			/*
 			DaySixteenPartOneTest ();
 			DaySixteenPartOne ();
 			DaySixteenPartTwo ();
+			*/
+			#endregion
+			#region Day Seventeen
+			Console.WriteLine (new DaySeventeen ().Test ());
+			Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50);
+			Console.ReadLine ();
 			#endregion
 		}
 		#region Day Sixteen
