@@ -115,11 +115,10 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region Day Seventeen
-			// TODO: Clean this up
 			/*
-			Console.WriteLine (new DaySeventeen ().Test ());
-			Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50);
-			Console.ReadLine ();
+			DaySeventeenTestOne ();
+			DaySeventeenPartOne ();
+			DaySeventeenPartTwo ();
 			*/
 			#endregion
 			#region Day Eighteen
@@ -165,7 +164,30 @@ namespace AdventOfCode
 		}
 		#endregion
 		#region Day Seventeen
-
+		static void DaySeventeenTestOne ()
+		{
+			Console.WriteLine ("Day 17 Test One Output");
+			DaySeventeen daySeventeen = new DaySeventeen ();
+			string shortest = daySeventeen.TestOne ();
+			Console.WriteLine ("Shortest: " + shortest);
+			Console.ReadLine ();
+		}
+		static void DaySeventeenPartOne ()
+		{
+			Console.WriteLine ("Day 17 Part One Output");
+			DaySeventeen daySeventeen = new DaySeventeen ();
+			string shortest = daySeventeen.PartOne ();
+			Console.WriteLine ("Shortest: " + shortest);
+			Console.ReadLine ();
+		}
+		static void DaySeventeenPartTwo ()
+		{
+			Console.WriteLine ("Day 17 Part Two Output");
+			DaySeventeen daySeventeen = new DaySeventeen ();
+			int longest = daySeventeen.PartTwo ();
+			Console.WriteLine ("Length of longest path: " + longest);
+			Console.ReadLine ();
+		}
 		#endregion
 		#region Day Sixteen
 		static void DaySixteenPartOneTest ()

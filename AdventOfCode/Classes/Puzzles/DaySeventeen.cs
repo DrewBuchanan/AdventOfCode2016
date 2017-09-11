@@ -15,16 +15,49 @@ namespace AdventOfCode.Puzzles
 
 		string testOneInput = "kglvqrro";
 		string openVals = "bcdef";
-		Point startPoint = new Point (0, 0);
-		Point current = new Point (0, 0);
-		Point goal = new Point (3, 3);
-		MD5 md5;
+		static Point startPoint = new Point (0, 0);
+		static Point current = new Point (0, 0);
+		static Point goal = new Point (3, 3);
+		MD5 md5 = MD5.Create ();
 
-		public string Test ()
+		string shortest = null;
+		int longest = 0;
+
+		/// <summary>
+		/// Performs a breadth-first search on all possible states, then returns the shortest path
+		/// </summary>
+		/// <returns></returns>
+		public string TestOne ()
 		{
-			md5 = MD5.Create ();
-			string shortest = null;
-			int longest = 0;
+			ProcessStates (testOneInput);
+			return shortest;
+		}
+
+		/// <summary>
+		/// Performs a breath-first search on all possible states, then returns the shortest path
+		/// </summary>
+		/// <returns>the shortest path in directions to travel (UDLR)</returns>
+		public string PartOne ()
+		{
+			ProcessStates (puzzleInput);
+			return shortest;
+		}
+
+		/// <summary>
+		/// Performs a breadth-first search on all possible states, then returns the length of the longest path
+		/// </summary>
+		/// <returns>length of longest path</returns>
+		public int PartTwo ()
+		{
+			ProcessStates (puzzleInput);
+			return longest;
+		}
+
+		/// <summary>
+		/// Performs a breadth-first search on all possible states based on puzzle input, setting shortest and longest as necessary
+		/// </summary>
+		void ProcessStates (string input)
+		{
 			Queue<State> q = new Queue<State> (new [] { new State () });
 			do
 			{
@@ -36,7 +69,7 @@ namespace AdventOfCode.Puzzles
 				}
 				else
 				{
-					string hash = GetHash (puzzleInput + state.path);
+					string hash = GetHash (input + state.path);
 					if (openVals.Contains (hash [0]) && state.pos.Y > 0)
 						q.Enqueue (new State { path = state.path + 'U', pos = new Point (state.pos.X, state.pos.Y - 1) });
 					if (openVals.Contains (hash [1]) && state.pos.Y < goal.Y)
@@ -47,16 +80,22 @@ namespace AdventOfCode.Puzzles
 						q.Enqueue (new State { path = state.path + 'R', pos = new Point (state.pos.X + 1, state.pos.Y) });
 				}
 			} while (q.Count > 0);
-			Console.WriteLine (longest);
-			return shortest;
 		}
 
+		/// <summary>
+		/// Holds the path taken thus far and the current position
+		/// </summary>
 		class State
 		{
 			public string path = "";
-			public Point pos = new Point (0, 0);
+			public Point pos = startPoint;
 		}
 
+		/// <summary>
+		/// Generates a hash code from a given input
+		/// </summary>
+		/// <param name="text">the input</param>
+		/// <returns>the hash code generated from input</returns>
 		string GetHash (string text)
 		{
 			byte [] hash = md5.ComputeHash (Encoding.ASCII.GetBytes (text));
