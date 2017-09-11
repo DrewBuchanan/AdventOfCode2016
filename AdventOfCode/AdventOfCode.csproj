@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Puzzles\DayEight.cs" />
+    <Compile Include="Classes\Puzzles\DayEighteen.cs" />
     <Compile Include="Classes\Puzzles\DayEleven.cs" />
     <Compile Include="Classes\Puzzles\DayFifteen.cs" />
     <Compile Include="Classes\Puzzles\DayFive.cs" />

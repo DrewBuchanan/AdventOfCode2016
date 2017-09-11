@@ -115,11 +115,58 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region Day Seventeen
+			// TODO: Clean this up
+			/*
 			Console.WriteLine (new DaySeventeen ().Test ());
 			Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50); Console.Beep (800, 50);
 			Console.ReadLine ();
+			*/
+			#endregion
+			#region Day Eighteen
+			/*
+			DayEighteenPartOneTestOne ();
+			DayEighteenPartOneTestTwo ();
+			DayEighteenPartOne ();
+			DayEighteenPartTwo ();
+			*/
 			#endregion
 		}
+		#region Day Eighteen
+		static void DayEighteenPartOneTestOne ()
+		{
+			Console.WriteLine ("Day 18 Part One Test 1 Output");
+			DayEighteen dayEighteen = new DayEighteen ();
+			dayEighteen.PartOneTestOne ();
+			Console.ReadLine ();
+		}
+		static void DayEighteenPartOneTestTwo ()
+		{
+			Console.WriteLine ("Day 18 Part One Test 1 Output");
+			DayEighteen dayEighteen = new DayEighteen ();
+			int safeTiles = dayEighteen.PartOneTestTwo ();
+			Console.WriteLine ("Safe Tiles: " + safeTiles);
+			Console.ReadLine ();
+		}
+		static void DayEighteenPartOne ()
+		{
+			Console.WriteLine ("Day 18 Part One Output");
+			DayEighteen dayEighteen = new DayEighteen ();
+			int safeTiles = dayEighteen.PartOne ();
+			Console.WriteLine ("Safe Tiles: " + safeTiles);
+			Console.ReadLine ();
+		}
+		static void DayEighteenPartTwo ()
+		{
+			Console.WriteLine ("Day 18 Part Two Output");
+			DayEighteen dayEighteen = new DayEighteen ();
+			int safeTiles = dayEighteen.PartTwo ();
+			Console.WriteLine ("Safe Tiles: " + safeTiles);
+			Console.ReadLine ();
+		}
+		#endregion
+		#region Day Seventeen
+
+		#endregion
 		#region Day Sixteen
 		static void DaySixteenPartOneTest ()
 		{
