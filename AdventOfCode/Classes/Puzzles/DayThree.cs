@@ -20,7 +20,7 @@ namespace AdventOfCode.Puzzles
 		void Initialize ()
 		{
 			numberOfTriangles = 0;
-			triangles = System.IO.File.ReadAllLines ("Day03Input.txt");
+			triangles = System.IO.File.ReadAllLines ("../../Inputs/Day03Input.txt");
 		}
 
 		/// <summary>
@@ -29,8 +29,6 @@ namespace AdventOfCode.Puzzles
 		/// <returns>number of valid triangles</returns>
 		public int PartOne ()
 		{
-			int numberOfTriangles = 0;
-			string [] triangles = System.IO.File.ReadAllLines ("Day03Input.txt");
 			for (int i = 0; i < triangles.Length; i++)
 			{
 				string triangle = trimmer.Replace (triangles [i], " ").Replace (" ", ",");

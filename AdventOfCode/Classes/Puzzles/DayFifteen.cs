@@ -11,19 +11,19 @@ namespace AdventOfCode.Puzzles
 	{
 		public int PartOneTest ()
 		{
-			string [] input = System.IO.File.ReadAllLines ("Day15TestInput.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day15TestInput.txt");
 			return GetTimeToPush (input);
 		}
 
 		public int PartOne ()
 		{
-			string [] input = System.IO.File.ReadAllLines ("Day15PartOneInput.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day15PartOneInput.txt");
 			return GetTimeToPush (input);
 		}
 
 		public int PartTwo ()
 		{
-			string [] input = System.IO.File.ReadAllLines ("Day15PartTwoInput.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day15PartTwoInput.txt");
 			return GetTimeToPush (input);
 		}
 

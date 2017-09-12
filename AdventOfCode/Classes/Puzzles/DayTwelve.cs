@@ -17,7 +17,7 @@ namespace AdventOfCode.Puzzles
 		public List<int> Test ()
 		{
 			InitializeRegisters ();
-			string [] input = System.IO.File.ReadAllLines ("Day12TestInput.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day12TestInput.txt");
 			int i = 0;
 			while (i < input.Length)
 			{
@@ -33,7 +33,7 @@ namespace AdventOfCode.Puzzles
 		public List<int> PartOne ()
 		{
 			InitializeRegisters ();
-			string [] input = System.IO.File.ReadAllLines ("Day12Input.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day12Input.txt");
 			int i = 0;
 			while (i < input.Length)
 			{
@@ -50,7 +50,7 @@ namespace AdventOfCode.Puzzles
 		{
 			InitializeRegisters ();
 			registers ["c"] = 1;
-			string [] input = System.IO.File.ReadAllLines ("Day12Input.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day12Input.txt");
 			int i = 0;
 			while (i < input.Length)
 			{

@@ -30,7 +30,7 @@ namespace AdventOfCode.Puzzles
 			currentPosition = new Vector2 (0, 0);
 			visitedPositions = new List<Vector2> ();
 
-			input = System.IO.File.ReadAllText ("Day01Input.txt");
+			input = System.IO.File.ReadAllText ("../../Inputs/Day01Input.txt");
 			steps = input.Replace (" ", "").Split (',');
 		}
 

@@ -20,7 +20,7 @@ namespace AdventOfCode.Puzzles
 		public void Initialize ()
 		{
 			realRooms = new List<string> ();
-			input = System.IO.File.ReadAllLines ("Day04Input.txt");
+			input = System.IO.File.ReadAllLines ("../../Inputs/Day04Input.txt");
 		}
 
 		/// <summary>

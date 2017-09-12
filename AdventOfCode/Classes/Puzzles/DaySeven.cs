@@ -23,7 +23,7 @@ namespace AdventOfCode.Puzzles
 		void Initialize ()
 		{
 			valid = 0;
-			ips = System.IO.File.ReadAllLines ("Day07Input.txt");
+			ips = System.IO.File.ReadAllLines ("../../Inputs/Day07Input.txt");
 		}
 
 		/// <summary>

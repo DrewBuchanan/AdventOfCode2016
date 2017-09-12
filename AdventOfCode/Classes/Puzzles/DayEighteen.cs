@@ -20,7 +20,7 @@ namespace AdventOfCode.Puzzles
 		/// </summary>
 		public void PartOneTestOne ()
 		{
-			Initialize (3, System.IO.File.ReadAllText ("Day18TestOneInput.txt"));
+			Initialize (3, System.IO.File.ReadAllText ("../../Inputs/Day18TestOneInput.txt"));
 			PopulateRows ();
 			for (int i = 0; i < rows.Length; i++)
 				Console.WriteLine (rows [i]);
@@ -32,7 +32,7 @@ namespace AdventOfCode.Puzzles
 		/// <returns>number of "safe" tiles</returns>
 		public int PartOneTestTwo ()
 		{
-			Initialize (10, System.IO.File.ReadAllText ("Day18TestTwoInput.txt"));
+			Initialize (10, System.IO.File.ReadAllText ("../../Inputs/Day18TestTwoInput.txt"));
 			PopulateRows ();
 			return GetNumberOfSafeTiles ();
 		}
@@ -43,7 +43,7 @@ namespace AdventOfCode.Puzzles
 		/// <returns>number of "safe" tiles</returns>
 		public int PartOne ()
 		{
-			Initialize (40, System.IO.File.ReadAllText ("Day18Input.txt"));
+			Initialize (40, System.IO.File.ReadAllText ("../../Inputs/Day18Input.txt"));
 			PopulateRows ();
 			return GetNumberOfSafeTiles ();
 		}
@@ -54,7 +54,7 @@ namespace AdventOfCode.Puzzles
 		/// <returns>number of "safe" tiles</returns>
 		public int PartTwo ()
 		{
-			Initialize (400000, System.IO.File.ReadAllText ("Day18Input.txt"));
+			Initialize (400000, System.IO.File.ReadAllText ("../../Inputs/Day18Input.txt"));
 			PopulateRows ();
 			return GetNumberOfSafeTiles ();
 		}

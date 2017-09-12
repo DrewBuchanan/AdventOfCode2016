@@ -11,7 +11,7 @@ namespace AdventOfCode.Puzzles
 		/// <returns>lowest valued IP</returns>
 		public uint Test ()
 		{
-			string [] input = System.IO.File.ReadAllLines ("Day20TestInput.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day20TestInput.txt");
 			Blacklist blacklist = new Blacklist (input);
 			bool found = false;
 			uint minimum = uint.MaxValue;
@@ -34,7 +34,7 @@ namespace AdventOfCode.Puzzles
 		/// <returns>lowest valued IP</returns>
 		public uint PartOne ()
 		{
-			string [] input = System.IO.File.ReadAllLines ("Day20Input.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day20Input.txt");
 			Blacklist blacklist = new Blacklist (input);
 			bool found = false;
 			uint minimum = uint.MaxValue;
@@ -57,7 +57,7 @@ namespace AdventOfCode.Puzzles
 		/// <returns>number of valid IPs</returns>
 		public uint PartTwo ()
 		{
-			string [] input = System.IO.File.ReadAllLines ("Day20Input.txt");
+			string [] input = System.IO.File.ReadAllLines ("../../Inputs/Day20Input.txt");
 			Blacklist blacklist = new Blacklist (input);
 			uint found = 0;
 			uint index = 0;

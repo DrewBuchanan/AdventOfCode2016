@@ -72,7 +72,7 @@ namespace AdventOfCode.Puzzles
 			// Initialize Data
 			bots = new Dictionary<int, Bot> ();
 			outputs = new Dictionary<int, Output> ();
-			instructions = new List<string> (System.IO.File.ReadAllLines ("Day10Input.txt"));
+			instructions = new List<string> (System.IO.File.ReadAllLines ("../../Inputs/Day10Input.txt"));
 
 			// Iterate over instructions
 			for (int i = 0; i < instructions.Count; i++)

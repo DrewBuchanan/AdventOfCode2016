@@ -8,7 +8,7 @@ namespace AdventOfCode.Puzzles
 
 		public DayNine ()
 		{
-			input = System.IO.File.ReadAllText ("Day09Input.txt").Replace ("\r", "");
+			input = System.IO.File.ReadAllText ("../../Inputs/Day09Input.txt").Replace ("\r", "");
 		}
 
 		/// <summary>

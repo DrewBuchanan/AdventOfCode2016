@@ -14,8 +14,8 @@ namespace AdventOfCode.Puzzles
 		/// <returns>The password</returns>
 		public string PartOne ()
 		{
-			directions = System.IO.File.ReadAllLines ("Day02Input.txt");
-			keypad = PopulateKeypad (System.IO.File.ReadAllLines ("Day02Keypad1.txt"));
+			directions = System.IO.File.ReadAllLines ("../../Inputs/Day02Input.txt");
+			keypad = PopulateKeypad (System.IO.File.ReadAllLines ("../../Inputs/Day02Keypad1.txt"));
 
 			Vector2 currentPosition = new Vector2 (1, 1);
 			string code = GenerateCode (currentPosition);
@@ -29,8 +29,8 @@ namespace AdventOfCode.Puzzles
 		/// <returns>The password</returns>
 		public string PartTwo ()
 		{
-			directions = System.IO.File.ReadAllLines ("Day02Input.txt");
-			keypad = PopulateKeypad (System.IO.File.ReadAllLines ("Day02Keypad2.txt"));
+			directions = System.IO.File.ReadAllLines ("../../Inputs/Day02Input.txt");
+			keypad = PopulateKeypad (System.IO.File.ReadAllLines ("../../Inputs/Day02Keypad2.txt"));
 
 			Vector2 currentPosition = new Vector2 (2, 0);
 			string code = GenerateCode (currentPosition);

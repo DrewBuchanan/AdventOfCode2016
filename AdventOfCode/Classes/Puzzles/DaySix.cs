@@ -13,7 +13,7 @@ namespace AdventOfCode.Puzzles
 		/// </summary>
 		public DaySix ()
 		{
-			input = System.IO.File.ReadAllLines ("Day06Input.txt");
+			input = System.IO.File.ReadAllLines ("../../Inputs/Day06Input.txt");
 			columns = new string [input [0].Length];
 			message = "";
 			for (int i = 0; i < columns.Length; i++)

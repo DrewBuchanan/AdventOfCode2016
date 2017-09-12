@@ -32,7 +32,7 @@ namespace AdventOfCode.Puzzles
 				for (int j = 0; j < screenHeight; j++)
 					screen [i, j] = false;
 
-			inputs = System.IO.File.ReadAllLines ("Day08Input.txt");
+			inputs = System.IO.File.ReadAllLines ("../../Inputs/Day08Input.txt");
 		}
 
 		/// <summary>
