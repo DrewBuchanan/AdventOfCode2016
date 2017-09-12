@@ -139,7 +139,15 @@ namespace AdventOfCode
 			DayNineteenPartTwoSlow ();
 			*/
 			#endregion
+			#region Day Twenty
+			//Console.WriteLine (new DayTwenty ().Test ());
+			//Console.WriteLine (new DayTwenty ().PartOne ());
+			Console.WriteLine (new DayTwenty ().PartTwo ());
+			Console.ReadLine ();
+			#endregion
 		}
+		#region Day Twenty
+		#endregion
 		#region Day Nineteen
 		static void DayNineteenPartOneTest ()
 		{
