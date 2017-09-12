@@ -129,7 +129,77 @@ namespace AdventOfCode
 			DayEighteenPartTwo ();
 			*/
 			#endregion
+			#region Day Nineteen
+			/*
+			DayNineteenPartOneTest ();
+			DayNineteenPartOne ();
+			DayNineteenPartOneSlow ();
+			DayNineteenPartTwoTest ();
+			DayNineteenPartTwo ();
+			DayNineteenPartTwoSlow ();
+			*/
+			#endregion
 		}
+		#region Day Nineteen
+		static void DayNineteenPartOneTest ()
+		{
+			Console.WriteLine ("Day 19 Part One Test Output");
+			DayNineteen dayNineteen = new DayNineteen ();
+			int id = dayNineteen.Test ();
+			Console.WriteLine ("Elf " + id + " has all the presents.");
+			Console.ReadLine ();
+		}
+		static void DayNineteenPartOne ()
+		{
+			Console.WriteLine ("Day 19 Part One Output");
+			DayNineteen dayNineteen = new DayNineteen ();
+			int id = dayNineteen.PartOneFaster ();
+			Console.WriteLine ("Elf " + id + " has all the presents.");
+			Console.ReadLine ();
+		}
+		static void DayNineteenPartOneSlow ()
+		{
+			Console.WriteLine ("Day 19 Part One Slow Impl Output");
+			Console.WriteLine ("This method is suuuuuuuuuuuuper slow. Enter 'run' to run it.");
+			string input = Console.ReadLine ();
+			if (input.ToLower () == "run")
+			{
+				DayNineteen dayNineteen = new DayNineteen ();
+				int id = dayNineteen.PartOne ();
+				Console.WriteLine ("Elf " + id + " has all the presents.");
+				Console.ReadLine ();
+			}
+		}
+		static void DayNineteenPartTwoTest ()
+		{
+			Console.WriteLine ("Day 19 Part Two Test Output");
+			DayNineteen dayNineteen = new DayNineteen ();
+			int id = dayNineteen.PartTwoFaster (true);
+			Console.WriteLine ("Elf " + id + " has all the presents.");
+			Console.ReadLine ();
+		}
+		static void DayNineteenPartTwo ()
+		{
+			Console.WriteLine ("Day 19 Part Two Output");
+			DayNineteen dayNineteen = new DayNineteen ();
+			int id = dayNineteen.PartTwoFaster (false);
+			Console.WriteLine ("Elf " + id + " has all the presents.");
+			Console.ReadLine ();
+		}
+		static void DayNineteenPartTwoSlow ()
+		{
+			Console.WriteLine ("Day 19 Part Two Slow Impl Output");
+			Console.WriteLine ("This method is suuuuuuuuuuuuper slow. Enter 'run' to run it.");
+			string input = Console.ReadLine ();
+			if (input.ToLower () == "run")
+			{
+				DayNineteen dayNineteen = new DayNineteen ();
+				int id = dayNineteen.PartTwo ();
+				Console.WriteLine ("Elf " + id + " has all the presents.");
+				Console.ReadLine ();
+			}
+		}
+		#endregion
 		#region Day Eighteen
 		static void DayEighteenPartOneTestOne ()
 		{

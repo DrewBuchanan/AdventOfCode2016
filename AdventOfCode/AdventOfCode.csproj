@@ -52,6 +52,7 @@
     <Compile Include="Classes\Puzzles\DayFour.cs" />
     <Compile Include="Classes\Puzzles\DayFourteen.cs" />
     <Compile Include="Classes\Puzzles\DayNine.cs" />
+    <Compile Include="Classes\Puzzles\DayNineteen.cs" />
     <Compile Include="Classes\Puzzles\DayOne.cs" />
     <Compile Include="Classes\Puzzles\DaySeven.cs" />
     <Compile Include="Classes\Puzzles\DaySeventeen.cs" />
