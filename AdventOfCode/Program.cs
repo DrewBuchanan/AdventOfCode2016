@@ -140,13 +140,38 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region Day Twenty
-			//Console.WriteLine (new DayTwenty ().Test ());
-			//Console.WriteLine (new DayTwenty ().PartOne ());
-			Console.WriteLine (new DayTwenty ().PartTwo ());
-			Console.ReadLine ();
+			/*
+			DayTwentyTest ();
+			DayTwentyPartOne ();
+			DayTwentyPartTwo ();
+			*/
 			#endregion
 		}
 		#region Day Twenty
+		static void DayTwentyTest ()
+		{
+			Console.WriteLine ("Day 20 Part 1 Test Output");
+			DayTwenty dayTwenty = new DayTwenty ();
+			uint minimum = dayTwenty.Test ();
+			Console.WriteLine ("Lowest Valued IP: " + minimum);
+			Console.ReadLine ();
+		}
+		static void DayTwentyPartOne ()
+		{
+			Console.WriteLine ("Day 20 Part 1 Output");
+			DayTwenty dayTwenty = new DayTwenty ();
+			uint minimum = dayTwenty.PartOne ();
+			Console.WriteLine ("Lowest Valued IP: " + minimum);
+			Console.ReadLine ();
+		}
+		static void DayTwentyPartTwo ()
+		{
+			Console.WriteLine ("Day 20 Part 2 Output");
+			DayTwenty dayTwenty = new DayTwenty ();
+			uint valid = dayTwenty.PartTwo ();
+			Console.WriteLine ("Valid IPs: " + valid);
+			Console.ReadLine ();
+		}
 		#endregion
 		#region Day Nineteen
 		static void DayNineteenPartOneTest ()
