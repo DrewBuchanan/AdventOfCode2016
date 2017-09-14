@@ -146,7 +146,38 @@ namespace AdventOfCode
 			DayTwentyPartTwo ();
 			*/
 			#endregion
+			#region Day Twenty-One
+			DayTwentyOneTest ();
+			DayTwentyOnePartOne ();
+			DayTwentyOnePartTwo ();
+			#endregion
 		}
+		#region Day Twenty-One
+		static void DayTwentyOneTest ()
+		{
+			Console.WriteLine ("Day 21 Part 1 Test Output");
+			DayTwentyOne dayTwentyOne = new DayTwentyOne ();
+			string scrambled = dayTwentyOne.Test ();
+			Console.WriteLine ("Scrambled Password: " + scrambled);
+			Console.ReadLine ();
+		}
+		static void DayTwentyOnePartOne ()
+		{
+			Console.WriteLine ("Day 21 Part 1 Output");
+			DayTwentyOne dayTwentyOne = new DayTwentyOne ();
+			string scrambled = dayTwentyOne.PartOne ();
+			Console.WriteLine ("Scrambled Password: " + scrambled);
+			Console.ReadLine ();
+		}
+		static void DayTwentyOnePartTwo ()
+		{
+			Console.WriteLine ("Day 21 Part 2 Output");
+			DayTwentyOne dayTwentyOne = new Puzzles.DayTwentyOne ();
+			string unscrambled = dayTwentyOne.PartTwo ();
+			Console.WriteLine ("Unscrambled Password: " + unscrambled);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region Day Twenty
 		static void DayTwentyTest ()
 		{
