@@ -154,11 +154,51 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region Day Twenty-Two
-
+			/*
+			DayTwentyTwoPartOne ();
+			DayTwentyTwoPartTwoTest ();
+			*/
+			#endregion
+			#region 2017 Day One
+			_2017DayOnePartOne ();
+			_2017DayOnePartTwo ();
 			#endregion
 		}
+		#region 2017 Day One
+		public static void _2017DayOnePartOne ()
+		{
+			Console.WriteLine ("2017 Day 1 Part 1 Output");
+			Puzzles._2017.DayOne dayOne = new Puzzles._2017.DayOne ();
+			int solution = dayOne.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayOnePartTwo ()
+		{
+			Console.WriteLine ("2017 Day 1 Part 2 Output");
+			Puzzles._2017.DayOne dayOne = new Puzzles._2017.DayOne ();
+			int solution = dayOne.PartTwo ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region Day Twenty-Two
-
+		static void DayTwentyTwoPartOne ()
+		{
+			Console.WriteLine ("Day 22 Part 1 Output");
+			DayTwentyTwo dayTwentyTwo = new DayTwentyTwo ();
+			int viablePairs = dayTwentyTwo.PartOne ();
+			Console.WriteLine ("Viable Pairs: " + viablePairs);
+			Console.ReadLine ();
+		}
+		static void DayTwentyTwoPartTwoTest ()
+		{
+			Console.WriteLine ("Day 22 Part 2 Test Output");
+			DayTwentyTwo dayTwentyTwo = new DayTwentyTwo ();
+			int shortest = dayTwentyTwo.PartTwoTest ();
+			Console.WriteLine ("Shortest Path Length: " + shortest);
+			Console.ReadLine ();
+		}
 		#endregion
 		#region Day Twenty-One
 		static void DayTwentyOneTest ()
