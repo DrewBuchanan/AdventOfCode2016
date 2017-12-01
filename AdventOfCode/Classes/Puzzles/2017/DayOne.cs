@@ -11,34 +11,20 @@
 
 		public int PartOne ()
 		{
-			return PartOneSolve (input);
+			return Solve (input, 1);
 		}
 
 		public int PartTwo ()
 		{
-			return PartTwoSolve (input);
+			return Solve (input, input.Length / 2);
 		}
 
-		public static int PartOneSolve (string sequence)
+		public static int Solve (string sequence, int comparator)
 		{
 			int sum = 0;
-			for (int i = 0; i < sequence.Length - 1; i++)
-				if (sequence [i] == sequence [i + 1])
+			for (int i = 0; i < sequence.Length; i++)
+				if (sequence [i] == sequence [(i + comparator) % sequence.Length])
 					sum += int.Parse (sequence [i].ToString ());
-			if (sequence [sequence.Length - 1] == sequence [0])
-				sum += int.Parse (sequence [0].ToString ());
-			return sum;
-		}
-
-		public static int PartTwoSolve (string sequnce)
-		{
-			int sum = 0;
-			int compareTo = sequnce.Length / 2;
-			for (int i = 0; i < sequnce.Length; i++)
-			{
-				if (sequnce [i] == sequnce [(i + compareTo) % sequnce.Length])
-					sum += int.Parse (sequnce [i].ToString ());
-			}
 			return sum;
 		}
 	}
