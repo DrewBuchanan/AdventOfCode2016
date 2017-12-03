@@ -67,10 +67,12 @@
     <Compile Include="Classes\Puzzles\2016\DayTwentyTwo.cs" />
     <Compile Include="Classes\Puzzles\2016\DayTwo.cs" />
     <Compile Include="Classes\Puzzles\2017\DayOne.cs" />
+    <Compile Include="Classes\Puzzles\2017\DayTwo.cs" />
     <Compile Include="Classes\Utilities\AlphaFreqDict.cs" />
     <Compile Include="Classes\Utilities\AStar.cs" />
     <Compile Include="Classes\Utilities\Direction.cs" />
     <Compile Include="Classes\Utilities\Vector2.cs" />
+    <Compile Include="Classes\Utilities\WhitespaceTrimmer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
