@@ -195,7 +195,28 @@ namespace AdventOfCode
 			_2017DaySixPartTwo ();
 			*/
 			#endregion
+			#region 2017 Day Seven
+			_2017DaySevenPartOne ();
+			_2017DaySevenPartTwo ();
+			#endregion
 		}
+		#region 2017 Day Seven
+		public static void _2017DaySevenPartOne ()
+		{
+			Console.WriteLine ("2017 Day 7 Part 1 Output");
+			Puzzles._2017.DaySeven daySeven = new Puzzles._2017.DaySeven ();
+			string solution = daySeven.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DaySevenPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 7 Part 2 Output");
+			Puzzles._2017.DaySeven daySeven = new Puzzles._2017.DaySeven ();
+			daySeven.PartTwo ();
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Six
 		public static void _2017DaySixPartOne ()
 		{

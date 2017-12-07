@@ -69,6 +69,7 @@
     <Compile Include="Classes\Puzzles\2017\DayFive.cs" />
     <Compile Include="Classes\Puzzles\2017\DayFour.cs" />
     <Compile Include="Classes\Puzzles\2017\DayOne.cs" />
+    <Compile Include="Classes\Puzzles\2017\DaySeven.cs" />
     <Compile Include="Classes\Puzzles\2017\DaySix.cs" />
     <Compile Include="Classes\Puzzles\2017\DayThree.cs" />
     <Compile Include="Classes\Puzzles\2017\DayTwo.cs" />
