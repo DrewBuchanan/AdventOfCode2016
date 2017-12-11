@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_2017DayFiveTests.cs" />
     <Compile Include="_2017DayFourTests.cs" />
+    <Compile Include="_2017DayNineTests.cs" />
     <Compile Include="_2017DayOneTests.cs" />
     <Compile Include="_2017DaySixTests.cs" />
     <Compile Include="_2017DayThreeTests.cs" />
