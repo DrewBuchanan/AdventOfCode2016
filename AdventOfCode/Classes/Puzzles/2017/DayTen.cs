@@ -80,20 +80,5 @@ namespace AdventOfCode.Puzzles._2017
 				skipSize++;
 			}
 		}
-
-		void Print ()
-		{
-			for (int i = 0; i < hash.Count; i++)
-			{
-				if (i == currentPosition)
-					Console.Write ("[");
-				Console.Write (hash [i]);
-				if (i == currentPosition)
-					Console.Write ("]");
-				Console.Write (" ");
-			}
-			Console.WriteLine ();
-			Console.WriteLine ();
-		}
 	}
 }
