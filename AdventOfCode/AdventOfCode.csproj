@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +76,7 @@
     <Compile Include="Classes\Puzzles\2017\DayOne.cs" />
     <Compile Include="Classes\Puzzles\2017\DaySeven.cs" />
     <Compile Include="Classes\Puzzles\2017\DaySix.cs" />
+    <Compile Include="Classes\Puzzles\2017\DayTen.cs" />
     <Compile Include="Classes\Puzzles\2017\DayThree.cs" />
     <Compile Include="Classes\Puzzles\2017\DayTwo.cs" />
     <Compile Include="Classes\Utilities\AlphaFreqDict.cs" />

@@ -10,6 +10,7 @@ namespace AdventOfCode
 {
 	class Program
 	{
+		[STAThread]
 		static void Main (string [] args)
 		{
 			#region Day One
@@ -213,7 +214,37 @@ namespace AdventOfCode
 			_2017DayNinePartTwo ();
 			*/
 			#endregion
+			#region 2017 Day Ten
+			_2017DayTenTest ();
+			_2017DayTenPartOne ();
+			_2017DayTenPartTwo ();
+			#endregion
 		}
+		#region 2017 Day Ten
+		public static void _2017DayTenTest ()
+		{
+			Console.WriteLine ("2017 Day 10 Part Test Output");
+			Puzzles._2017.DayTen dayTen = new Puzzles._2017.DayTen ();
+			string solution = dayTen.Test ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayTenPartOne ()
+		{
+			Console.WriteLine ("2017 Day 10 Part 1 Output");
+			Puzzles._2017.DayTen dayTen = new Puzzles._2017.DayTen ();
+			int solution = dayTen.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayTenPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 10 Part 1 Output");
+			Puzzles._2017.DayTen dayTen = new Puzzles._2017.DayTen ();
+			dayTen.PartTwo ();
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Nine
 		public static void _2017DayNinePartOne ()
 		{
