@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace AdventOfCode.Puzzles._2017
@@ -43,31 +39,14 @@ namespace AdventOfCode.Puzzles._2017
 		{
 			for (int i = 0; i < steps.Length; i++)
 			{
-				switch (steps [i].ToLower ())
-				{
-					case "n":
-						currentPosition.Y -= 1;
-						break;
-					case "s":
-						currentPosition.Y += 1;
-						break;
-					case "nw":
-						currentPosition.X -= 1;
-						break;
-					case "se":
-						currentPosition.X += 1;
-						break;
-					case "ne":
-						currentPosition.X += 1;
-						currentPosition.Y -= 1;
-						break;
-					case "sw":
-						currentPosition.X -= 1;
-						currentPosition.Y += 1;
-						break;
-					default:
-						throw new InvalidOperationException (steps [i] + " is not valid");
-				}
+				if (steps [i].Contains ("n") && !steps [i].Contains ("w"))
+					currentPosition.Y--;
+				if (steps [i].Contains ("s") && !steps [i].Contains ("e"))
+					currentPosition.Y++;
+				if (steps [i].Contains ("w"))
+					currentPosition.X--;
+				if (steps [i].Contains ("e"))
+					currentPosition.X++;
 				int dist = GetDistanceFromOrigin ();
 				if (dist > maxDistance)
 					maxDistance = dist;

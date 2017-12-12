@@ -222,11 +222,11 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Eleven
-			/*
+			
 			_2017DayElevenTest ();
 			_2017DayElevenPartOne ();
 			_2017DayElevenPartTwo ();
-			*/
+			//*/
 			#endregion
 		}
 		#region 2017 Day Eleven
