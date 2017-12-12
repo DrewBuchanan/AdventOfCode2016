@@ -222,13 +222,46 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Eleven
-			
+			/*
 			_2017DayElevenTest ();
 			_2017DayElevenPartOne ();
 			_2017DayElevenPartTwo ();
-			//*/
+			*/
+			#endregion
+			#region 2017 Day Twelve
+			/*
+			_2017DayTwelveTest ();
+			_2017DayTwelvePartOne ();
+			_2017DayTwelvePartTwo ();
+			*/
 			#endregion
 		}
+		#region 2017 Day Twelve
+		public static void _2017DayTwelveTest ()
+		{
+			Console.WriteLine ("2017 Day 12 Test Output");
+			Puzzles._2017.DayTwelve dayTwelve = new Puzzles._2017.DayTwelve ("../../Inputs/2017/Day12TestInput.txt");
+			int solution = dayTwelve.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayTwelvePartOne ()
+		{
+			Console.WriteLine ("2017 Day 12 Part 1 Output");
+			Puzzles._2017.DayTwelve dayTwelve = new Puzzles._2017.DayTwelve ("../../Inputs/2017/Day12Input.txt");
+			int solution = dayTwelve.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayTwelvePartTwo ()
+		{
+			Console.WriteLine ("2017 Day 12 Part 2 Output");
+			Puzzles._2017.DayTwelve dayTwelve = new Puzzles._2017.DayTwelve ("../../Inputs/2017/Day12Input.txt");
+			int solution = dayTwelve.PartTwo ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Eleven
 		public static void _2017DayElevenTest ()
 		{
