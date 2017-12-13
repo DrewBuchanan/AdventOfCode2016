@@ -235,7 +235,38 @@ namespace AdventOfCode
 			_2017DayTwelvePartTwo ();
 			*/
 			#endregion
+			#region 2017 Day Thirteen
+			_2017DayThirteenTest ();
+			_2017DayThirteenPartOne ();
+			_2017DayThirteenPartTwo ();
+			#endregion
 		}
+		#region 2017 Day Thirteen
+		public static void _2017DayThirteenTest ()
+		{
+			Console.WriteLine ("2017 Day 13 Test Output");
+			Puzzles._2017.DayThirteen dayThirteen = Puzzles._2017.DayThirteen.Test ();
+			uint solution = dayThirteen.GetDelayThatAvoidsDetection ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayThirteenPartOne ()
+		{
+			Console.WriteLine ("2017 Day 13 Part 1 Output");
+			Puzzles._2017.DayThirteen dayThirteen = Puzzles._2017.DayThirteen.RealData ();
+			int solution = dayThirteen.GetSeverity ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayThirteenPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 13 Part 2 Output");
+			Puzzles._2017.DayThirteen dayThirteen = Puzzles._2017.DayThirteen.RealData ();
+			uint solution = dayThirteen.GetDelayThatAvoidsDetection ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Twelve
 		public static void _2017DayTwelveTest ()
 		{
