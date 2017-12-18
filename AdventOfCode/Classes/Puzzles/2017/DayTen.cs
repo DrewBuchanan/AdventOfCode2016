@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace AdventOfCode.Puzzles._2017
 {
-	// TODO: Change this class to use utility class
 	public class DayTen
 	{
 		string stringInput = "212,254,178,237,2,0,1,54,167,92,117,125,255,61,159,164";
@@ -38,26 +37,8 @@ namespace AdventOfCode.Puzzles._2017
 
 		public void PartTwo ()
 		{
-			lengths = new int [stringInput.Length + 5];
-			for (int i = 0; i < stringInput.Length; i++)
-				lengths [i] = stringInput [i];
-			for (int i = 0; i < addlLengths.Length; i++)
-				lengths [lengths.Length - 5 + i] = addlLengths [i];
-
-			for (int i = 0; i < 64; i++)
-				Process ();
-
-			List<int> sparseHash = new List<int> ();
-			for (int i = 0; i < hash.Count; i += 16)
-			{
-				sparseHash.Add (hash [i] ^ hash [i + 1] ^ hash [i + 2] ^ hash [i + 3] ^
-							   hash [i + 4] ^ hash [i + 5] ^ hash [i + 6] ^ hash [i + 7] ^
-							   hash [i + 8] ^ hash [i + 9] ^ hash [i + 10] ^ hash [i + 11] ^
-							   hash [i + 12] ^ hash [i + 13] ^ hash [i + 14] ^ hash [i + 15]);
-			}
-			string hex = "";
-			for (int i = 0; i < sparseHash.Count; i++)
-				hex += sparseHash [i].ToString ("X").PadLeft (2, '0');
+			Utilities.KnotHash knotHash = new Utilities.KnotHash (stringInput);
+			string hex = knotHash.GenerateHash ();
 			Console.WriteLine (hex);
 			System.Windows.Clipboard.SetText (hex);
 		}

@@ -1,18 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace AdventOfCode.Utilities
 {
-	// TODO: Clean this up
-	public static class KnotHash
+	public class KnotHash
 	{
-		static int twistIterations = 64;
+		public KnotHash (string input)
+		{
+			this.input = input;
+			twistIterations = 64;
+			appendAdditional = true;
+		}
+
+		public KnotHash (string input, int twistIterations, bool appendAdditional)
+		{
+			this.input = input;
+			this.twistIterations = twistIterations;
+			this.appendAdditional = appendAdditional;
+		}
+
+		string input;
+		int twistIterations;
+		bool appendAdditional;
 		static int [] addlLengths = new int [] { 17, 31, 73, 47, 23 };
 
-		private static List<int> GetBaseHash ()
+		private List<int> GetBaseHash ()
 		{
 			List<int> hash = new List<int> ();
 			for (int i = 0; i < 256; i++)
@@ -20,17 +31,13 @@ namespace AdventOfCode.Utilities
 			return hash;
 		}
 
-		public static string GenerateHash (string input)
+		public string GenerateHash ()
 		{
 			List<int> hash = GetBaseHash ();
 
 			int [] lengths = GenerateLengthsArray (input);
 
 			hash = Twist (hash, lengths, twistIterations);
-
-
-			for (int i = 0; i < 10; i++)
-				Console.WriteLine (hash [i]);
 
 			List<int> sparseHash = new List<int> ();
 			for (int i = 0; i < hash.Count; i += 16)
@@ -47,17 +54,18 @@ namespace AdventOfCode.Utilities
 			return hex;
 		}
 
-		private static int [] GenerateLengthsArray (string input)
+		private int [] GenerateLengthsArray (string input)
 		{
-			int [] lengths = new int [input.Length + 5];
+			int [] lengths = new int [appendAdditional ? input.Length + 5 : input.Length];
 			for (int i = 0; i < input.Length; i++)
 				lengths [i] = input [i];
-			for (int i = 0; i < addlLengths.Length; i++)
-				lengths [lengths.Length - 5 + i] = addlLengths [i];
+			if (appendAdditional)
+				for (int i = 0; i < addlLengths.Length; i++)
+					lengths [lengths.Length - 5 + i] = addlLengths [i];
 			return lengths;
 		}
 
-		private static List<int> Twist (List<int> hash, int [] lengths, int iterations)
+		private List<int> Twist (List<int> hash, int [] lengths, int iterations)
 		{
 			int skipSize = 0;
 			int currentPosition = 0;
