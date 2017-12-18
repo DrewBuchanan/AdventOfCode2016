@@ -236,9 +236,13 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Thirteen
+			/*
 			_2017DayThirteenTest ();
 			_2017DayThirteenPartOne ();
 			_2017DayThirteenPartTwo ();
+			*/
+			#endregion
+			#region 2017 Day Fourteen
 			#endregion
 		}
 		#region 2017 Day Thirteen

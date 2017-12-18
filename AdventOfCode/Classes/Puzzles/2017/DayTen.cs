@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace AdventOfCode.Puzzles._2017
 {
+	// TODO: Change this class to use utility class
 	public class DayTen
 	{
 		string stringInput = "212,254,178,237,2,0,1,54,167,92,117,125,255,61,159,164";
@@ -57,7 +58,7 @@ namespace AdventOfCode.Puzzles._2017
 			string hex = "";
 			for (int i = 0; i < sparseHash.Count; i++)
 				hex += sparseHash [i].ToString ("X").PadLeft (2, '0');
-			Console.WriteLine (hex.Length + " " + hex);
+			Console.WriteLine (hex);
 			System.Windows.Clipboard.SetText (hex);
 		}
 

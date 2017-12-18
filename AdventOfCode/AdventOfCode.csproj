@@ -73,6 +73,7 @@
     <Compile Include="Classes\Puzzles\2017\DayEleven.cs" />
     <Compile Include="Classes\Puzzles\2017\DayFive.cs" />
     <Compile Include="Classes\Puzzles\2017\DayFour.cs" />
+    <Compile Include="Classes\Puzzles\2017\DayFourteen.cs" />
     <Compile Include="Classes\Puzzles\2017\DayNine.cs" />
     <Compile Include="Classes\Puzzles\2017\DayOne.cs" />
     <Compile Include="Classes\Puzzles\2017\DaySeven.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Classes\Utilities\AlphaFreqDict.cs" />
     <Compile Include="Classes\Utilities\AStar.cs" />
     <Compile Include="Classes\Utilities\Direction.cs" />
+    <Compile Include="Classes\Utilities\KnotHash.cs" />
     <Compile Include="Classes\Utilities\Vector2.cs" />
     <Compile Include="Classes\Utilities\WhitespaceTrimmer.cs" />
     <Compile Include="Program.cs" />
