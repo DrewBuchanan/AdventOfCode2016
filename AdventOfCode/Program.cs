@@ -257,11 +257,35 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Sixteen
+			/*
 			_2017DaySixteenTest ();
 			_2017DaySixteenPartOne ();
 			_2017DaySixteenPartTwo ();
+			*/
+			#endregion
+			#region 2017 Day Seventeen
+			_2017DaySeventeenPartOne ();
+			_2017DaySeventeenPartTwo ();
 			#endregion
 		}
+		#region 2017 Day Seventeen
+		public static void _2017DaySeventeenPartOne ()
+		{
+			Console.WriteLine ("2017 Day 17 Part 1 Output");
+			Puzzles._2017.DaySeventeen daySeventeen = new Puzzles._2017.DaySeventeen ();
+			long solution = daySeventeen.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DaySeventeenPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 17 Part 2 Output");
+			Puzzles._2017.DaySeventeen daySeventeen = new Puzzles._2017.DaySeventeen ();
+			long solution = daySeventeen.PartTwo ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Sixteen
 		public static void _2017DaySixteenTest ()
 		{
