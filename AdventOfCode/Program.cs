@@ -264,10 +264,25 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Seventeen
+			/*
 			_2017DaySeventeenPartOne ();
 			_2017DaySeventeenPartTwo ();
+			*/
+			#endregion
+			#region 2017 Day Eighteen
+			_2017DayEighteenPartOne ();
 			#endregion
 		}
+		#region 2017 Day Eighteen
+		public static void _2017DayEighteenPartOne ()
+		{
+			Console.WriteLine ("2017 Day 18 Part 1 Output");
+			Puzzles._2017.DayEighteen dayEighteen = new Puzzles._2017.DayEighteen ();
+			long solution = dayEighteen.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Seventeen
 		public static void _2017DaySeventeenPartOne ()
 		{
