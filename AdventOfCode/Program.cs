@@ -270,15 +270,46 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Eighteen
-			_2017DayEighteenPartOne ();
+			//_2017DayEighteenPartOne ();
+			//_2017DayEighteenPartTwo ();
+			#endregion
+			#region 2017 Day Nineteen
+			/*
+			_2017DayNineteenPartOne ();
+			_2017DayNineteenPartTwo ();
+			*/
 			#endregion
 		}
+		#region 2017 Day Nineteen
+		private static void _2017DayNineteenPartOne ()
+		{
+			Console.WriteLine ("2017 Day 19 Part 1 Output");
+			Puzzles._2017.DayNineteen dayNineteen = Puzzles._2017.DayNineteen.GetPuzzle ();
+			Console.WriteLine (dayNineteen.GetLetters ());
+			Console.ReadLine ();
+		}
+		private static void _2017DayNineteenPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 19 Part 2 Output");
+			Puzzles._2017.DayNineteen dayNineteen = Puzzles._2017.DayNineteen.GetPuzzle ();
+			Console.WriteLine (dayNineteen.GetSteps ());
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Eighteen
 		public static void _2017DayEighteenPartOne ()
 		{
 			Console.WriteLine ("2017 Day 18 Part 1 Output");
 			Puzzles._2017.DayEighteen dayEighteen = new Puzzles._2017.DayEighteen ();
 			long solution = dayEighteen.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		public static void _2017DayEighteenPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 18 Part 2 Output");
+			Puzzles._2017.DayEighteen dayEighteen = new Puzzles._2017.DayEighteen ();
+			long solution = dayEighteen.PartTwo ();
 			Console.WriteLine ("Solution: " + solution);
 			Console.ReadLine ();
 		}
