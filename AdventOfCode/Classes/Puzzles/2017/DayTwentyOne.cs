@@ -137,5 +137,12 @@ namespace AdventOfCode.Puzzles._2017
 				}
 			return string.Join ("/", rtrn);
 		}
+
+		public void DrawImage ()
+		{
+			string [] split = image.Split ('/');
+			for (int i = 0; i < split.Length; i++)
+				Console.WriteLine (split [i]);
+		}
 	}
 }

@@ -288,12 +288,20 @@ namespace AdventOfCode
 			#endregion
 			#region 2017 Day Twenty-One
 			/*
+			_2017DayTwentyOneShowResultsOf3Cycles ();
 			_2017DayTwentyOnePartOne ();
 			_2017DayTwentyOnePartTwo ();
 			*/
 			#endregion
 		}
 		#region 2017 Day Twenty-One
+		private static void _2017DayTwentyOneShowResultsOf3Cycles ()
+		{
+			Puzzles._2017.DayTwentyOne dayTwentyOne = Puzzles._2017.DayTwentyOne.Puzzle ();
+			dayTwentyOne.PerformIterations (2);
+			dayTwentyOne.DrawImage ();
+			Console.ReadLine ();
+		}
 		private static void _2017DayTwentyOnePartOne ()
 		{
 			Console.WriteLine ("2017 Day 21 Part 1 Output");
