@@ -71,6 +71,7 @@ namespace AdventOfCode.Puzzles._2017
 						currentDistance = dist;
 					}
 				}
+
 				List<int> toRemove = new List<int> ();
 				foreach (KeyValuePair<int, Particle> p in particles)
 				{

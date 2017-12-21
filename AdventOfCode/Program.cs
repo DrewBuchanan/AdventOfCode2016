@@ -13,6 +13,7 @@ namespace AdventOfCode
 		[STAThread]
 		static void Main (string [] args)
 		{
+			Console.SetBufferSize (Console.BufferWidth, 10000);
 			#region Day One
 			/*
 			DayOnePartOne ();
@@ -280,10 +281,38 @@ namespace AdventOfCode
 			*/
 			#endregion
 			#region 2017 Day Twenty
+			/*
 			_2017DayTwentyPartOne ();
 			_2017DayTwentyPartTwo ();
+			*/
+			#endregion
+			#region 2017 Day Twenty-One
+			/*
+			_2017DayTwentyOnePartOne ();
+			_2017DayTwentyOnePartTwo ();
+			*/
 			#endregion
 		}
+		#region 2017 Day Twenty-One
+		private static void _2017DayTwentyOnePartOne ()
+		{
+			Console.WriteLine ("2017 Day 21 Part 1 Output");
+			Puzzles._2017.DayTwentyOne dayTwentyOne = Puzzles._2017.DayTwentyOne.Puzzle ();
+			dayTwentyOne.PerformIterations (5);
+			int solution = dayTwentyOne.GetOnPixels ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		private static void _2017DayTwentyOnePartTwo ()
+		{
+			Console.WriteLine ("2017 Day 21 Part 2 Output");
+			Puzzles._2017.DayTwentyOne dayTwentyOne = Puzzles._2017.DayTwentyOne.Puzzle ();
+			dayTwentyOne.PerformIterations (18);
+			int solution = dayTwentyOne.GetOnPixels ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Twenty
 		private static void _2017DayTwentyPartOne ()
 		{
