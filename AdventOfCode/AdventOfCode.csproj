@@ -90,6 +90,7 @@
     <Compile Include="Classes\Puzzles\2017\DayTwelve.cs" />
     <Compile Include="Classes\Puzzles\2017\DayTwenty.cs" />
     <Compile Include="Classes\Puzzles\2017\DayTwentyOne.cs" />
+    <Compile Include="Classes\Puzzles\2017\DayTwentyTwo.cs" />
     <Compile Include="Classes\Puzzles\2017\DayTwo.cs" />
     <Compile Include="Classes\Utilities\AlphaFreqDict.cs" />
     <Compile Include="Classes\Utilities\AStar.cs" />

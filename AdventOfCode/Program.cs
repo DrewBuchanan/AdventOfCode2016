@@ -293,7 +293,31 @@ namespace AdventOfCode
 			_2017DayTwentyOnePartTwo ();
 			*/
 			#endregion
+			#region 2017 Day Twenty-Two
+			/*
+			_2017DayTwentyTwoPartOne ();
+			_2017DayTwentyTwoPartTwo ();
+			*/
+			#endregion
 		}
+		#region 2017 Day Twenty-Two
+		private static void _2017DayTwentyTwoPartOne ()
+		{
+			Console.WriteLine ("2017 Day 22 Part 1 Output");
+			Puzzles._2017.DayTwentyTwo dayTwentyTwo = new Puzzles._2017.DayTwentyTwo ();
+			int solution = dayTwentyTwo.PartOne ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		private static void _2017DayTwentyTwoPartTwo ()
+		{
+			Console.WriteLine ("2017 Day 22 Part 2 Output");
+			Puzzles._2017.DayTwentyTwo dayTwentyTwo = new Puzzles._2017.DayTwentyTwo ();
+			int solution = dayTwentyTwo.PartTwo ();
+			Console.WriteLine ("Solution: " + solution);
+			Console.ReadLine ();
+		}
+		#endregion
 		#region 2017 Day Twenty-One
 		private static void _2017DayTwentyOneShowResultsOf3Cycles ()
 		{
