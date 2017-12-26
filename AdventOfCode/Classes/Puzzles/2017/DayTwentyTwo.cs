@@ -25,7 +25,7 @@ namespace AdventOfCode.Puzzles._2017
 			grid = new Grid (input, false);
 			carrier = new Carrier (grid);
 			for (int i = 0; i < 10000; i++)
-				Burst ();
+				carrier.Burst ();
 			return grid.GetInfectionsCaused ();
 		}
 
@@ -34,15 +34,8 @@ namespace AdventOfCode.Puzzles._2017
 			grid = new Grid (input, true);
 			carrier = new Carrier (grid);
 			for (int i = 0; i < 10000000; i++)
-				Burst ();
+				carrier.Burst ();
 			return grid.GetInfectionsCaused ();
-		}
-
-		void Burst ()
-		{
-			carrier.Turn ();
-			carrier.Work ();
-			carrier.Move ();
 		}
 
 		public class Carrier
@@ -58,7 +51,14 @@ namespace AdventOfCode.Puzzles._2017
 				this.grid = grid;
 			}
 
-			internal void Turn ()
+			public void Burst ()
+			{
+				Turn ();
+				Work ();
+				Move ();
+			}
+
+			void Turn ()
 			{
 				Status status = grid.GetStatusAtPoint (position);
 				if (status == Status.Infected)
@@ -69,12 +69,12 @@ namespace AdventOfCode.Puzzles._2017
 					direction = (Direction)(((int)direction + 2) % 4);
 			}
 
-			internal void Work ()
+			void Work ()
 			{
 				grid.InvertAtPoint (position);
 			}
 
-			internal void Move ()
+			void Move ()
 			{
 				switch (direction)
 				{
